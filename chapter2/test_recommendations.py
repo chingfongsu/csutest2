@@ -17,7 +17,6 @@ class Test(unittest.TestCase):
         'alice': {'Lady in the Water': 2, 'Snakes on a Plane': 3, 'Just My Luck': 5},
         'brian': {'Lady in the Water': 3, 'The Night Listener': 3, 'Just My Luck': 1},
         }
-        print recommendations.sim_pearson(prefs, 'alice', 'brian')
         self.assertAlmostEqual(recommendations.sim_pearson(prefs, 'alice', 'brian'), -0.9486, places=3, msg='Both like two movies but different rating')
 
     def test_sim_distance(self):
