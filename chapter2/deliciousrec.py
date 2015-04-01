@@ -4,6 +4,7 @@ import time
 def initializeUserDict(tag,count=5):
   user_dict={}
   # get the top count' popular posts
+  print get_popular(tag=tag)
   for p1 in get_popular(tag=tag)[0:count]:
     # find all users who posted this
     for p2 in get_urlposts(p1['href']):
